@@ -33,24 +33,22 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
-task add(type:Exec){
-	executable 'git'
-	args "add", "./"
-	println("git add .")
-}
-def msg="ddd"
-task commit(type:Exec) {
-	executable 'git'
-	args 'commit', '-m', msg
-	println("git commit -m "+msg)
-}
-
-task push(dependsOn:build, type: Exec) {
-	executable 'git'
-	args "push", "origin", "master"
-	println("git push origin master")
-}
-
-
-task commitAndPush(dependsOn: [add, commit, push]){
-}
+//task add(type:Exec){
+//	executable 'git'
+//	args "add", "./"
+//	println("git add .")
+//}
+//task commit(type:Exec) {
+//	executable 'git'
+//	args 'commit', '-m', msg
+//	println("git commit -m "+msg)
+//}
+//
+//task push(dependsOn:build, type: Exec) {
+//	executable 'git'
+//	args "push", "origin", "master"
+//	println("git push origin master")
+//}
+//
+//task commitAndPush(dependsOn: [add, commit, push]){
+//}
