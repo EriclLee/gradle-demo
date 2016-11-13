@@ -1,4 +1,10 @@
 #!/usr/bin/env bash -e
+if [ $# != 2 ] ; then
+echo "USAGE: $0"
+echo "Please set the commit message"
+echo "eg:$0 'update test!'"
+exit 1;
+fi
 gradle build
 git add .
 git commit -m "$1"
