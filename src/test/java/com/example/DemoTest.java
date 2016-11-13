@@ -22,9 +22,9 @@ public class DemoTest {
 
     @Test
     public void addTest() throws Exception {
-        int a = 1;
+        int a = 2;
         int b=2;
-        int expectResult = 3;
+        int expectResult = 4;
         int actualResult = demo.Add(a,b);
         assertThat(actualResult, is(equalTo(expectResult)));
 
