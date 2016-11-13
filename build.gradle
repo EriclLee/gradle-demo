@@ -36,7 +36,7 @@ task push(dependsOn:build, type: Exec) {
 	args "add","./"
 	println("git add .")
 	executable 'git'
-	args "commit", "-m", "dd"
+	args "commit"
 	println("git commit -m "+msg)
 	executable 'git'
 	args "push", "origin", "master"
