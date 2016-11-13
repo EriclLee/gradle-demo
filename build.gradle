@@ -52,3 +52,8 @@ dependencies {
 //
 //task commitAndPush(dependsOn: [add, commit, push]){
 //}
+task push(dependsOn:build, type: Exec) {
+	executable 'git'
+	args "push", "origin", "master"
+	println("git push origin master")
+}

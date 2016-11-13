@@ -1,5 +1,5 @@
 #!/usr/bin/env bash -e
-if [ $# != 2 ] ; then
+if [ $# != 1 ] ; then
 echo "USAGE: $0"
 echo "Please set the commit message"
 echo "eg:$0 'update test!'"
