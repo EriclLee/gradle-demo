@@ -31,11 +31,7 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
-task hello(dependsOn:build){
-	doLast {
-		println("hello world!")
-	}
-	doFirst{
-		println("beigin")
-	}
+task push(dependsOn:build, type: Exec) {
+	executable 'sh'
+	args "-c", "git push origin master"
 }
