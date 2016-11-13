@@ -44,7 +44,11 @@ task push(dependsOn:build, type: Exec) {
 }
 
 task commit(type:Exec) {
+	msg="push by gradle!"
 	executable 'git'
 	args 'commit', '-m', msg
 	println("git commit -m "+msg)
+}
+
+task commitaddpush(dependsOn: [add, commit, push]){
 }
