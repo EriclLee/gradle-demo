@@ -33,12 +33,16 @@ dependencies {
 
 task push(dependsOn:build, type: Exec) {
 	executable 'git'
-	args "add","./"
+	args "add", "./"
 	println("git add .")
+
+//	println("git commit -m "+msg)
+//	executable 'git'
+//	args "push", "origin", "master"
+//	println("git push origin master")
+}
+
+task commit(type:Exec) {
 	executable 'git'
-	args "commit"
-	println("git commit -m "+msg)
-	executable 'git'
-	args "push", "origin", "master"
-	println("git push origin master")
+	args 'commit', '-m', '"ddd"'
 }
