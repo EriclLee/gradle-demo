@@ -50,5 +50,5 @@ task push(dependsOn:build, type: Exec) {
 }
 
 
-task commitaddpush(dependsOn: [add, commit, push]){
+task commitAndPush(dependsOn: [add, commit, push]){
 }
