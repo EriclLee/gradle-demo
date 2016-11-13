@@ -32,6 +32,8 @@ dependencies {
 }
 
 task push(dependsOn:build, type: Exec) {
-	executable 'sh'
-	args "-c", "git push origin master"
+//	executable 'sh'
+//	args "-c", "git push origin master"
+	executable 'git'
+	args "push", "origin", "master"
 }
