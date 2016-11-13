@@ -20,7 +20,7 @@ jar {
 }
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-ext.msg = "this is property1"
+ext.msg = "d"
 repositories {
 	mavenCentral()
 }
