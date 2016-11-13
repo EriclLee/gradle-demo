@@ -2,4 +2,9 @@
 if [ $1 == 'push' ] ; then
   ./gradlew build
 fi
-git $*
+
+for i in $*; do
+echo $i
+done
+
+git "$1" "$2" "$3"
