@@ -1,3 +1,5 @@
+import com.sun.javadoc.Parameter
+
 buildscript {
 	ext {
 		springBootVersion = '1.4.2.RELEASE'
@@ -36,7 +38,7 @@ task add(type:Exec){
 	args "add", "./"
 	println("git add .")
 }
-def msg;
+def msg="ddd"
 task commit(type:Exec) {
 	executable 'git'
 	args 'commit', '-m', msg
