@@ -20,7 +20,6 @@ jar {
 }
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-
 repositories {
 	mavenCentral()
 }
@@ -37,18 +36,19 @@ task add(type:Exec){
 	println("git add .")
 }
 
+task commit(type:Exec) {
+
+	executable 'git'
+	args 'commit', '-m', msg
+	println("git commit -m "+msg)
+}
+
 task push(dependsOn:build, type: Exec) {
 	executable 'git'
 	args "push", "origin", "master"
 	println("git push origin master")
 }
 
-task commit(type:Exec) {
-	msg="push by gradle!"
-	executable 'git'
-	args 'commit', '-m', msg
-	println("git commit -m "+msg)
-}
 
 task commitaddpush(dependsOn: [add, commit, push]){
 }
