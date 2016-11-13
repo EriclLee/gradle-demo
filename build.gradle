@@ -20,7 +20,7 @@ jar {
 }
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-ext.msg = "d"
+
 repositories {
 	mavenCentral()
 }
@@ -36,9 +36,8 @@ task add(type:Exec){
 	args "add", "./"
 	println("git add .")
 }
-
+def msg;
 task commit(type:Exec) {
-
 	executable 'git'
 	args 'commit', '-m', msg
 	println("git commit -m "+msg)
