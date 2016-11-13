@@ -1,5 +1,5 @@
 #!/usr/bin/env bash -e
 if [ $1 == 'push' ] ; then
-   gradle build
+  ./gradlew build
 fi
-git push origin master
+git $*

@@ -24,7 +24,7 @@ public class DemoTest {
     public void addTest() throws Exception {
         int a = 2;
         int b=3;
-        int expectResult = 5;
+        int expectResult = 4;
         int actualResult = demo.Add(a,b);
         assertThat(actualResult, is(equalTo(expectResult)));
 
